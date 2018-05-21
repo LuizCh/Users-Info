@@ -1,7 +1,0 @@
-<div *ngIf='data$ | async as data'>
-    <div class="userCard" *ngFor="let user of data ">
-        <a href="" [routerLink]="['/user', 'user.id']" routerLinkActive="router-link-active" >
-            {{user.name}}
-        </a>
-    </div>
-</div>

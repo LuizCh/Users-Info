@@ -1,3 +1,10 @@
-<div>Password:  <input type="text" placeholder="Ingrese Password" 
-  (keyup.enter) = "goToUsers()" ></div>
-
+<div class="pageContainer">
+  <div class="container">
+    <div><span>Usuario: </span><input type="text" placeholder="Ingrese su usuario"></div>
+    <div><span>Contraseña: </span><input type="password" placeholder="Ingrese su contraseña"></div>
+    <div style="text-align: center">
+      <button (click)="goToUsers()">Ingresar</button>
+    </div>
+  </div>
+</div>
+      

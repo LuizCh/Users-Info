@@ -1,4 +1,3 @@
-import { UsersComponent } from './authentication/users/users.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 
@@ -13,11 +12,16 @@ import { LoginComponent } from './authentication/login/login.component';
 	declarations: [ AppComponent ],
 	imports: [
 		BrowserModule,
+		AuthenticationModule,
 		RouterModule.forRoot([
 			{
+				path: '',
+				component: AuthenticationModule
+			},
+			{
 				path: 'authentication',
-				loadChildren: './authentication/authentication.module#AuthenticationModule',
-				canLoad: [ AuthenticationGuard ]
+				loadChildren: './users/users.module#UsersModule'
+				// canLoad: [ AuthenticationGuard ]
 			}
 		])
 	],

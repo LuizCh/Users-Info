@@ -10,6 +10,6 @@ export class AppComponent {
 	title = 'app';
 
 	constructor(private route: Router) {
-		this.route.navigate([ 'authentication' ]);
+		this.route.navigate([ '' ]);
 	}
 }

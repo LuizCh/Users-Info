@@ -1,0 +1,8 @@
+<div *ngIf='data$ | async as data' class="pageContainer">
+    <div class="userCard" *ngFor="let user of data ">
+        {{user.id | json}}
+        <a href="" [routerLink]="['/users', user.id]">
+            {{user.name}}
+        </a>
+    </div>
+</div>
